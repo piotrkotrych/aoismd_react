@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg fixed-top navbar-white bg-white shadow-sm">
       <div className="container">
         <a href="./index.html" className="navbar-brand">
-          <img src={logo} alt="" srcset="" />
+          <img src={logo} alt="" srcSet="" />
         </a>
       </div>
     </nav>
