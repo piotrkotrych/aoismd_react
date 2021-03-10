@@ -11,6 +11,12 @@ export default function SearchField() {
     console.log(code);
   };
 
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   const handleSubmit = () => {
     if (code.length > 5) {
       setCurrentCode(code);
@@ -33,6 +39,7 @@ export default function SearchField() {
                 className="form-control searchinput"
                 onChange={handleChange}
                 value={code}
+                onKeyPress={handleEnter}
               />
               <button
                 className="btn btn-large btn-success"

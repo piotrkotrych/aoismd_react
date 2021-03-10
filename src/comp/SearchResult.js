@@ -19,7 +19,7 @@ export default function SearchResult(props) {
         setError(false);
         setLoading(true);
         const url =
-          "http://so718.sohost.pl/aoismd/api.php?type=getSingleCode&code=" +
+          "http://so718.sohost.pl/api.php?type=getSingleCode&code=" +
           props.code;
         const res = await axios(url);
         setResults(res.data);
