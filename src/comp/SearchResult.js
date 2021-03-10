@@ -62,7 +62,7 @@ export default function SearchResult(props) {
               Download CSV
             </CSVLink>
           </div>
-          <table className="table mb-3">
+          <table className="table-responsive mb-3">
             <thead>
               <tr>
                 <th scope="col">#</th>
