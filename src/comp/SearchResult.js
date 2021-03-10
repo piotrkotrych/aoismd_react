@@ -62,32 +62,34 @@ export default function SearchResult(props) {
               Download CSV
             </CSVLink>
           </div>
-          <table className="table-responsive mb-3">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Date</th>
-                <th scope="col">Program</th>
-                <th scope="col">Component</th>
-                <th scope="col">Error</th>
-                <th scope="col">Result</th>
-              </tr>
-            </thead>
-            <tbody>
-              {results.map((e, index) => {
-                return (
-                  <tr key={e.id}>
-                    <td>{index + 1}</td>
-                    <td>{e.qc_date}</td>
-                    <td>{e.program}</td>
-                    <td>{e.component}</td>
-                    <td>{e.error}</td>
-                    <td>{e.status}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div className="table-responsive">
+            <table className="table mb-3">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Program</th>
+                  <th scope="col">Component</th>
+                  <th scope="col">Error</th>
+                  <th scope="col">Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                {results.map((e, index) => {
+                  return (
+                    <tr key={e.id}>
+                      <td>{index + 1}</td>
+                      <td>{e.qc_date}</td>
+                      <td>{e.program}</td>
+                      <td>{e.component}</td>
+                      <td>{e.error}</td>
+                      <td>{e.status}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }
